@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fvc2m9cpumonitorfxml.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fvc2m9cpumonitorfxml.FXMLDocumentController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+      <ImageView fitHeight="325.0" fitWidth="382.0" layoutX="15.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@gauge.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hand" fitHeight="262.0" fitWidth="434.0" layoutX="47.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hand.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="record" layoutX="260.0" layoutY="332.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Record" />
+      <Button fx:id="start" layoutX="15.0" layoutY="332.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Start" />
+      <Label fx:id="display" alignment="CENTER" layoutX="72.0" layoutY="246.0" prefHeight="123.0" prefWidth="210.0" text="CPU = --.--%" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="363.0" layoutY="39.0" prefHeight="300.0" prefWidth="410.0">
+         <children>
+            <Label fx:id="record1" alignment="CENTER" prefHeight="100.0" prefWidth="410.0" text="--.--%">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="record2" alignment="CENTER" prefHeight="100.0" prefWidth="410.0" text="--.--%">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="record3" alignment="CENTER" prefHeight="102.0" prefWidth="410.0" text="--.--%">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
     </children>
 </AnchorPane>
